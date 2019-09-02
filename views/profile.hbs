@@ -1,0 +1,27 @@
+<h2 style="text-align:center">Profile</h2>
+
+<div class="card">
+    <br>
+    {{!-- <img src="fff" style="width:100%"> --}}
+    {{!-- <div class="cards"> --}}
+    <img src="{{this.photo}}" id="img_avatar.png" width="200" height="150"/>
+    <br>
+    <label class="file-upload-container" for="file-upload">
+        <input id="file-upload" type="file" style="display:none;">
+        Select an Image
+    </label>
+    {{!-- </div> --}}
+    <h1>{{this.name}}</h1>
+    <p class="group title"><span>Group: </span>{{this.group}}</p>
+    <p class="email title"><span>Email: </span>{{this.email}}</p>
+
+    <div style="margin: 24px 0;">
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+    </div>
+    <p><button>Save changes</button></p>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>

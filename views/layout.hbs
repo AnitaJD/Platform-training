@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="//cdn.jsdelivr.net/handlebarsjs/4.0.5/handlebars.runtime.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/stylesheet/user.css">
+    <link rel="stylesheet" href="/stylesheet/sidebar.css">
+    <title>ФОРМА</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="icon-bar">
+            <a class="active" href="/"><i class="fa fa-home"></i></a> </div>
+        <div class="dropdown">
+            {{!-- <a href="#home">Home</a> --}}
+            {{!-- <a href="#news">News</a> --}}
+            <div class="dropdown">
+                <button class="dropbtn">Menu
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    {{#if user}}
+                    <a href="/users/profile">Profile</a>
+                    <a href="/users/messages">Messages</a>
+                    <a href="/users/themes">Themes</a>
+                    <a href="/users/group">Group</a>
+                    {{else}}
+                    <a href="/users/contacts">Contacts</a>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+
+        {{!-- <a href="#news">News</a> --}}
+        <div class="topnav-right">
+
+            <a class="icon-bar" href="#"><i class="fa fa-envelope"></i></a>
+            {{#if user}}
+            <a href="/users/logout">Sign out</a>
+            {{else}}
+            <a href="/users/register">Register</a>
+            <a href="/users/login">Sign in</a>
+            {{/if}}
+        </div>
+    </div>
+
+    <div class='body_content'>
+        {{!-- <ul>
+            {{#if user}}
+            <li>
+                <a href="/users/logout">Выход</a>
+            </li> --}}
+        {{!-- <li>
+                <a href="/users/party">Устроить вечеринку</a>
+            </li> --}}
+        {{!-- {{else}} --}}
+        {{!-- <li>
+                <a href="/users/register">Регистрация</a>
+            </li> --}}
+        {{!-- <li>
+                <a href="/users/login">Авторизация</a>
+            </li> --}}
+        {{!-- {{/if}}
+        </ul> --}}
+        {{{body}}}
+    </div>
+    <br>
+    <div class="footer">
+        <p>Copyright © 🐝<time datetime="2019">2019</time>
+            Elbrus Bootcamp</p>
+        <address>Moscow, Russia.</address>
+    </div>
+    <script src="/js/application.js"></script>
+</body>
+
+</html>
