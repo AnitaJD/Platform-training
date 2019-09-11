@@ -17,10 +17,8 @@ fileUpload.addEventListener('change', function(event) {
     },
     data: formData
   }).then(function(res){
-    // console.log(res);
     imjPreview.src = res.data.secure_url;
   }).catch(function(err){
     console.log(err);
   })
-  // console.log(file);
 });

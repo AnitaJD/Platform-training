@@ -15,8 +15,6 @@
         <div class="icon-bar">
             <a class="active" href="/"><i class="fa fa-home"></i></a> </div>
         <div class="dropdown">
-            {{!-- <a href="#home">Home</a> --}}
-            {{!-- <a href="#news">News</a> --}}
             <div class="dropdown">
                 <button class="dropbtn">Menu
                     <i class="fa fa-caret-down"></i>
@@ -34,9 +32,7 @@
             </div>
         </div>
 
-        {{!-- <a href="#news">News</a> --}}
         <div class="topnav-right">
-
             <a class="icon-bar" href="#"><i class="fa fa-envelope"></i></a>
             {{#if user}}
             <a href="/users/logout">Sign out</a>
@@ -48,23 +44,6 @@
     </div>
 
     <div class='body_content'>
-        {{!-- <ul>
-            {{#if user}}
-            <li>
-                <a href="/users/logout">Выход</a>
-            </li> --}}
-        {{!-- <li>
-                <a href="/users/party">Устроить вечеринку</a>
-            </li> --}}
-        {{!-- {{else}} --}}
-        {{!-- <li>
-                <a href="/users/register">Регистрация</a>
-            </li> --}}
-        {{!-- <li>
-                <a href="/users/login">Авторизация</a>
-            </li> --}}
-        {{!-- {{/if}}
-        </ul> --}}
         {{{body}}}
     </div>
     <br>
